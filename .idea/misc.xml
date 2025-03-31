@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.10 (WhatsApp-chat-analysizer)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="WhatsApp-chat-analysizer" project-jdk-type="Python SDK" />
+</project>
