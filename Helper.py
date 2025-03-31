@@ -2,7 +2,6 @@ import emoji
 import pandas as pd
 from wordcloud import WordCloud
 from collections import Counter
-# from emoji import emoji_list
 
 def fetch_statestic(selected_user,df):
     if selected_user != 'Group Analysis':
@@ -26,7 +25,7 @@ def fetch_statestic(selected_user,df):
     
     df['Weekday'] = df['msg_time_date'].dt.day_name()
     weekday_counts = df['Weekday'].value_counts()
-
+    
     wordcloud = WordCloud(
         width=800, height=400, background_color='white', colormap='viridis',
         max_words=200, contour_width=3, contour_color='steelblue'
@@ -49,7 +48,6 @@ def emoji_helper(selected_user,df):
     emoji_list = []
     for message in df['Message']:
         emoji_list.extend([c for c in message if c in emoji.EMOJI_DATA])
-    # emoji_df= pd.DataFrame(Counter(emoji_list).most_common(), columns=['emoji , count'])
     emoji_df = pd.DataFrame(Counter(emoji_list).most_common(), columns=['emoji', 'count'])
 
     return emoji_df

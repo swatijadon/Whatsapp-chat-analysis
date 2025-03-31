@@ -1,6 +1,4 @@
 import streamlit as st
-import emoji
-# import preprocessor file
 import dataPreprocessor,Helper
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -74,6 +72,12 @@ if uploaded_files is not None:
         st.pyplot(fig2)
 
     #    Weekly activity map
+        print(df['msg_time_date'].dtype)
+        print(df['msg_time_date'].head())  # See if it's properly formatted
+
+        print("Weekday Counts Data:", weekday_counts)
+        print("Index:", weekday_counts.index)
+        print("Values:", weekday_counts.values)
         fig3, ax3 = plt.subplots(figsize=(8, 4))
         sns.barplot(x=weekday_counts.index, y=weekday_counts.values, palette="viridis", ax=ax3)
         ax3.set_xlabel("Day of the Week")
