@@ -1,8 +1,6 @@
 emoji
 pandas
 wordcloud
-collections
-re
 streamlit
 matplotlib
 seaborn
